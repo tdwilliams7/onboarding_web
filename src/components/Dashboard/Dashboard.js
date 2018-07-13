@@ -4,7 +4,6 @@ import { StyledContainer, StyledSide, StyledMain } from './style';
 // components
 import SideNav from '../SideNav/SideNav';
 import Home from '../Home/Home';
-import SideNavPage from '../SideNavPage';
 
 class Dashboard extends Component {
   render() {
