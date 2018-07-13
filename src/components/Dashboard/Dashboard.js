@@ -9,15 +9,13 @@ import SideNavPage from '../SideNavPage';
 class Dashboard extends Component {
   render() {
     return (
-      <StyledContainer className="container-fluid">
-        <div className="row">
-          <StyledSide className="col-md-3">
-            <SideNavPage />
-          </StyledSide>
-          <StyledMain className="col-md-9">
-            <Home />
-          </StyledMain>
-        </div>
+      <StyledContainer container spacing={0}>
+        <StyledSide item md={3}>
+          <SideNav />
+        </StyledSide>
+        <StyledMain item xs={12} md={9}>
+          <Home />
+        </StyledMain>
       </StyledContainer>
     );
   }

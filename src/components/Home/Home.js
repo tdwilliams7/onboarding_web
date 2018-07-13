@@ -1,65 +1,77 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-import { $moonstone, $oxford, $platinum } from '../../GlobalStyles/colors';
+import Grid from '@material-ui/core/Grid';
+import {
+  StyledTitle,
+  StyledContent,
+  StyledName,
+  StyledSection,
+  StyledSectionTitle,
+  StyledItem,
+  StyledListItem
+} from './style';
+import { $pastelGray } from '../../GlobalStyles/colors';
 
 class Home extends Component {
   render() {
     return (
-      <StyledBody className="container-fluid">
-        <StyledTitle className="row">
-          <div className="col-12">Home</div>
+      <Grid container spacing={0}>
+        <StyledTitle item xs={12}>
+          <div>Temp home</div>
         </StyledTitle>
-        <StyledContent className="row">
-          <div className="col-12">
-            <div className="row">
-              <div className="col-1" />
-              <StyledName className="col-8">Hello name</StyledName>
-            </div>
-            <StyledSection className="row">
-              <div className="col-1" />
-              <div className="col-8">
-                <StyledSectionTitle>Incomplete tasks (#)</StyledSectionTitle>
-              </div>
-              <div className="col-4" />
-            </StyledSection>
-          </div>
+        <StyledContent container spacing={0}>
+          <Grid item xs={1} />
+          <StyledName item xs={8}>
+            Hello Name
+          </StyledName>
+          <Grid item xs={3} />
+          <StyledSection container spacing={0}>
+            <Grid item xs={1} />
+            <StyledSectionTitle item xs={8}>
+              Incomplete tasks (#)
+            </StyledSectionTitle>
+            <ListItem />
+            <ListItem />
+            <ListItem />
+          </StyledSection>
+          <StyledSection container spacing={0}>
+            <Grid item xs={1} />
+            <StyledSectionTitle item xs={8}>
+              Awesome People (new)
+            </StyledSectionTitle>
+            <ListItem />
+            <ListItem />
+            <ListItem />
+          </StyledSection>
+          <StyledSection container spacing={0}>
+            <Grid item xs={1} />
+            <StyledSectionTitle item xs={8}>
+              Lists
+            </StyledSectionTitle>
+            <ListItem />
+            <ListItem />
+            <ListItem />
+          </StyledSection>
         </StyledContent>
-      </StyledBody>
+      </Grid>
     );
   }
 }
 
-const StyledBody = styled.div`
-  padding: 0;
-`;
-const StyledTitle = styled.div`
-  min-height: 3em;
-  background-color: ${$oxford};
-  div {
-    font-size: 2em;
-    color: ${$moonstone};
-  }
-`;
-
-const StyledContent = styled.div`
-  height: calc(100% - 3em);
-`;
-
-const StyledName = styled.div`
-  font-size: 2em;
-  color: ${$oxford};
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 1.5em;
-  margin-top: 1em;
-`;
-
-const StyledSection = styled.div``;
-
-const StyledSectionTitle = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  color: ${$oxford};
-`;
+const ListItem = () => {
+  return (
+    <StyledListItem container spacing={0}>
+      <Grid item xs={1} />
+      <StyledItem item xs={8}>
+        name special
+      </StyledItem>
+      <Grid item xs={3} />
+      <Grid item xs={1} />
+      <Grid item xs={8}>
+        <hr style={{ borderTop: `${$pastelGray}` }} />
+      </Grid>
+      <Grid item xs={3} />
+    </StyledListItem>
+  );
+};
 
 export default Home;

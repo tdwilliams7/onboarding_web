@@ -1,14 +1,15 @@
 import styled from 'styled-components';
+import Grid from '@material-ui/core/Grid';
 
-export const StyledContainer = styled.div`
+export const StyledContainer = styled(Grid)`
   padding-left: 0;
-  overflow-x: hidden;
+  width: 100%;
 `;
 
-export const StyledSide = styled.div`
+export const StyledSide = styled(Grid)`
   padding: 0;
 `;
 
-export const StyledMain = styled.div`
-  padding: 0;
+export const StyledMain = styled(Grid)`
+  padding-left: 0px;
 `;

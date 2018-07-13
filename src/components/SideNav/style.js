@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { $platinum } from '../../GlobalStyles/colors';
 
 export const StyledBody = styled.div`
   background-color: #002642;
-  min-height: 100vh;
-  min-width: 100%;
+  min-height: 100%;
 `;
 
 export const StyledTitle = styled.div`
@@ -32,7 +32,7 @@ export const StyledLinkGroup = styled.div`
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
-  color: inherit;
+  color: ${$platinum};
   :hover {
     color: #de6b48;
   }
