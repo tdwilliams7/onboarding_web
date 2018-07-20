@@ -16,14 +16,9 @@ class Home extends Component {
     return (
       <Grid container spacing={0}>
         <StyledTitle item xs={12}>
-          <div>Temp home</div>
+          <div>Home</div>
         </StyledTitle>
         <StyledContent container spacing={0}>
-          <Grid item xs={1} />
-          <StyledName item xs={8}>
-            Hello Name
-          </StyledName>
-          <Grid item xs={3} />
           <StyledSection container spacing={0}>
             <Grid item xs={1} />
             <StyledSectionTitle item xs={8}>
